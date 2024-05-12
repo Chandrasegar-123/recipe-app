@@ -1,6 +1,6 @@
 import express from 'express';
-import { PORT,mongoDBURL } from './configs/config.js';
-import mongoose from 'mongoose';
+import connectDB, { PORT } from './configs/config.js';
+import recipe from './routes/api/recipeRoutes.js';
 
 
 const app = express();
@@ -10,15 +10,17 @@ app.get('/', (req, res) => {
 }   );
 
 
-mongoose
-    .connect(mongoDBURL)
-    .then(() => {
-        console.log('Connected to MongoDB');
-        app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
-        });
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-    
+app.use('/recipe',recipe);
+
+
+connectDB();
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+
+
+
+
+
