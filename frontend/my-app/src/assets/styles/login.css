@@ -1,0 +1,44 @@
+/* styles.css */
+
+.login-container {
+    max-width: 400px;
+    margin: auto; /* Center the container horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center the content inside the container */
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-form button {
+    padding: 10px 20px;
+    background-color: #fd0076; /* Pink color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #fd0076f0; /* Darker pink on hover */
+  }
+  
